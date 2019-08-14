@@ -8,7 +8,7 @@ use Symfony\Component\HttpFoundation\RequestStack;
 
 /**
  * @author pizzaminded <miki@appvende.net>
- * @license proprietary
+ * @license MIT
  */
 class UrlDetectionHandler implements UrlDetectionInterface
 {
