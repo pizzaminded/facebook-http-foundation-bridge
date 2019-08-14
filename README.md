@@ -3,6 +3,12 @@
 If your app uses symfony/http-foundation and facebook/php-graph-sdk, this one is for you! This Library integrates these two packages.
 
 
+# Installation
+
+```
+composer require pizzaminded/facebook-http-foundation-bridge
+```
+
 # Usage:
 
 ```php
