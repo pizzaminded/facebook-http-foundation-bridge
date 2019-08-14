@@ -1,0 +1,11 @@
+{
+  "type": "library",
+  "license": "MIT",
+  "name": "pizzaminded/facebook-http-foundation-bridge",
+  "description": "Integrates facebook/php-graph-sdk with symfony/http-foundation",
+  "autoload": {
+    "psr-0": {
+      "Pizzaminded\\": "src/Pizzaminded"
+    }
+  }
+}
