@@ -5,15 +5,26 @@ If your app uses symfony/http-foundation and facebook/php-graph-sdk, this one is
 
 # Usage:
 
+```php
+<?php 
 
+$urlDetectionHandler = Pizzaminded\FacebookHttpFoundationBridge\UrlDetectionHandler::fromRequest($request);
+$persistentDataHandler = new Pizzaminded\FacebookHttpFoundationBridge\SessionDataHandler($session);
 
+$facebook = new Facebook\Facebook([
+    //things
+    'url_detection_handler' => $urlDetectionHandler,
+    'persistent_data_handler' => $persistentDataHandler
+]);
+
+```
 ## If you are using Symfony 4+:
 
 (Maybe it works on 3.4+, havent checked yet)
 
 Add this lines to your `services.yaml`:
 
-````php
+```php
 Pizzaminded\FacebookHttpFoundationBridge\UrlDetectionHandler: ~
 Pizzaminded\FacebookHttpFoundationBridge\SessionDataHandler: ~
 
@@ -27,7 +38,7 @@ Facebook\Facebook:
                 persistent_data_handler: '@Pizzaminded\FacebookHttpFoundationBridge\SessionDataHandler'
 
 
-````
+```
 
 
 # License:
